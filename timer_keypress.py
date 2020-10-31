@@ -40,10 +40,11 @@ def on_key_release(key):
     print('{} released'.format(key))
     keyboard.release(Key.space)
     
-
-if __name__ == '__main__':
-
+def listener_func():
     with Listener(
         on_press = on_key_press,
         on_release = on_key_release) as listener:
             listener.join()
+
+
+    
