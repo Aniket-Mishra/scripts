@@ -1,12 +1,10 @@
-import pyautogui
-import timer_keypress
 import time
 
+import pyautogui
+import timer_keypress
 
-
-
-if __name__ == '__main__':
-    new_mail_location = pyautogui.locateOnScreen('screenshots/new_mail.png')
+if __name__ == "__main__":
+    new_mail_location = pyautogui.locateOnScreen("screenshots/new_mail.png")
 
     print(new_mail_location)
 
@@ -18,10 +16,14 @@ if __name__ == '__main__':
     new_mail_y = new_mail_point.y
 
     # pyautogui.click(new_mail_x, new_mail_y)
-    pyautogui.doubleClick('screenshots/new_mail.png')
+    pyautogui.doubleClick("screenshots/new_mail.png")
 
     time.sleep(1)
-    pyautogui.alert(text='Press Any key after closing this popup. Press and Hold Esc to end script.', title='Attention!', button='OK')
+    pyautogui.alert(
+        text="Press Any key after closing this popup. Press and Hold Esc to end script.",
+        title="Attention!",
+        button="OK",
+    )
     # pyautogui.press('enter')
 
     timer_keypress.listener_func()

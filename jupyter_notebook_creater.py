@@ -16,8 +16,6 @@ code = """\
 
     """
 
-nb['cells'] = [nbf.v4.new_markdown_cell(text),
-                nbf.v4.new_code_cell(code)]
+nb["cells"] = [nbf.v4.new_markdown_cell(text), nbf.v4.new_code_cell(code)]
 
-nbf.write(nb, 'test.ipynb')
-    
+nbf.write(nb, "test.ipynb")
